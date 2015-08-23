@@ -20,22 +20,18 @@
 
             .parallax__layer {
                 position: absolute;
+                top: 0;
                 left: 0;
                 right: 0;
+                bottom: 0;
             }
 
             .parallax__layer.background {
                 -webkit-transform: translateZ(-1px) scale(2);
-                background-color: #535353;
-                height: 100vh;
             }
 
             .parallax__layer.foreground {
                 -webkit-transform: translateZ(0);
-                background-color: white;
-                margin: 100vh 7px 100vh 7px;
-                position: relative;
-                height: calc(100vh - 14px);
             }
 
             * {
@@ -43,14 +39,22 @@
                 padding: 0;
             }
 
+            *, *:before, *:after {
+                -webkit-box-sizing: border-box;
+            }
+
             .text {
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                display: inline;
                 padding: 20px;
+                background-color: white;
+                position: relative;
+                height: calc(100vh - 14px);
+                margin: calc(100vh + 7px) 7px calc(100vh + 7px) 7px;
+            }
+
+            .titlediv {
+                height: 100vh;
+                position: relative;
+                background-color: transparent;
             }
 
             .text > * {
@@ -58,17 +62,20 @@
             }
 
             .title {
-                width: 100%;
-                text-align: center;
-                font-size: 175%;
-                font-family: serif;
+                font-size: 250%;
             }
 
             .title.page {
-                margin-top: 40vh;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%);
                 color: white;
                 text-decoration: underline;
-                font-size: 250%;
+            }
+
+            .title.sub {
+                font-size: 90%;
             }
 
             .list {
@@ -117,30 +124,57 @@
     <body>
         <div class="parallax">
             <div class="parallax__layer background">
-                <div class="text">
+                <div class="titlediv">
                     <div class="title page">Jen's Gardens Help Manual</div>
+                </div>
+                <div class="titlediv">
+                    <div class="title page">Using the Spreadsheet</div>
+                </div>
+                <div class="titlediv">
+                    <div class="title page">Using the Payment Input Form</div>
+                </div>
+                <div class="titlediv">
+                    <div class="title page">Using the Payment View</div>
+                </div>
+                <div class="titlediv">
+                    <div class="title page">Using the Payment Input Form</div>
+                </div>
+                <div class="titlediv">
+                    <div class="title page">End of Guide</div>
                 </div>
             </div>
             <div class="parallax__layer foreground">
                 <div class="text">
-                    <div class="title">Using the Spreadsheet</div>
+                    <div class="sub title">Welcome</div>
                     <p class="para">There are functions of Microsoft Excel that are assumed knowlage for the following Help Manual pages.</p>
-                    <div class="pic">
-                        <img src="Screen%20Shot%201.png">
-                        <p><i>Fig 1</i> - The Sheet Selection Tabs</p>
-                    </div>
                     <p class="para">A few basic operating pricipals:</p>
                     <ul class="list">
                         <li>Sheets are different pages or views of the same spreadsheet file. The different functions of this Spreadsheet file have been split into 6 sheets, however, only three have to be accessed to fulfill basic operation.</li>
+                        <div class="pic">
+                            <img src="Screen%20Shot%201.png">
+                            <p><i>Fig 1</i> - The Sheet Selection Tabs</p>
+                        </div>
                         <li>To switch between sheets, which have names that describe their function such as <code>Input</code> for Input Form, the user can select them by clicking on the tabs as the bottom left of the Excel interface. As seen in <i>Figure 1</i></li>
                         <li>The cursor is the easiest method of interraction with Excel, if this Manual asks you to select or interact with some element of the screen, using the cursor the unspoken assumption.</li>
                     </ul>
                 </div>
-            </div>
-            <div class="parallax__layer foreground">
                 <div class="text">
-                    <div class="title">Using the Input Form</div>
-                    <p class="para">The input form is a page of your spreadsheet that allows you to enter information into the record page in a manner that is significantly quicker the entering the information either manually into the spreadsheet, or onto a similar paper system.</p>
+                    <div class="title">Using the Spreadsheet</div>
+                    <p class="para">There are functions of Microsoft Excel that are assumed knowlage for the following Help Manual pages.</p>
+                    <p class="para">A few basic operating pricipals:</p>
+                    <ul class="list">
+                        <li>Sheets are different pages or views of the same spreadsheet file. The different functions of this Spreadsheet file have been split into 6 sheets, however, only three have to be accessed to fulfill basic operation.</li>
+                        <div class="pic">
+                            <img src="Screen%20Shot%201.png">
+                            <p><i>Fig 1</i> - The Sheet Selection Tabs</p>
+                        </div>
+                        <li>To switch between sheets, which have names that describe their function such as <code>Input</code> for Input Form, the user can select them by clicking on the tabs as the bottom left of the Excel interface. As seen in <i>Figure 1</i></li>
+                        <li>The cursor is the easiest method of interraction with Excel, if this Manual asks you to select or interact with some element of the screen, using the cursor the unspoken assumption.</li>
+                    </ul>
+                </div>
+                <div class="text">
+                    <div class="title">Using the Payment Input Form</div>
+                    <p class="para">The Payment Input Form is a page of your spreadsheet that allows you to enter information into the record page in a manner that is significantly quicker the entering the information either manually into the spreadsheet, or onto a similar paper system.</p>
                     <div class="pic">
                         <img src="Screen%20Shot%202.png">
                         <p><i>Fig 2</i> - The Input Sheet</p>
@@ -154,8 +188,6 @@
                         <li>You may also notice a <code>Clear</code> function, this button allows the operator to delete the current information from the Input Form, saving time when entering similar records into the <code>Record</code> Sheet.</li>
                     </ul>
                 </div>
-            </div>
-            <div class="parallax__layer foreground">
                 <div class="text">
                     <div class="title">Interpreting the Stored Records</div>
                     <p class="para">The <code>Record</code> Sheet is where all payment records entered into the system are stored. It takes the form of a table, with one row for each employee per week, and 26 columns that show all information that went into calculating the employees Total Pay.</p>
@@ -168,10 +200,8 @@
                         <li>Select the sheet <code>Record</code> from the tabs on the bottom left. <i>Figure 1</i>.</li>
                     </ul>
                 </div>
-            </div>
-            <div class="parallax__layer foreground">
                 <div class="text">
-                    <div class="title">Using the Recent History</div>
+                    <div class="title">Using the Payment View</div>
                     <p class="para">The <code>Recent</code> Sheet</p>
                     <div class="pic">
                         <img src="Screen%20Shot%204.png">
