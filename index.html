@@ -8,7 +8,7 @@
         <style>
             body {
                 font-family: 'Open Sans';
-                background-color: #535353;
+                background-color: rgb(96, 201, 100);
             }
 
             .parallax {
@@ -49,6 +49,8 @@
                 position: relative;
                 height: calc(100vh - 14px);
                 margin: calc(100vh + 7px) 7px calc(100vh + 7px) 7px;
+                overflow-y: scroll;
+                box-shadow: 0 0 5px 10px rgb(96, 201, 100);
             }
 
             .titlediv {
@@ -74,7 +76,7 @@
             }
 
             .title.sub {
-                font-size: 90%;
+                font-size: 170%;
             }
 
             .list {
@@ -101,7 +103,6 @@
                 display: inline;
                 width: 100%;
                 padding: 0;
-                !important
             }
 
             .pic {
@@ -127,81 +128,75 @@
                     <div class="title page">Jen's Gardens Help Manual</div>
                 </div>
                 <div class="titlediv">
-                    <div class="title page">Using the Spreadsheet</div>
+                    <div class="title page">The Input Sheet</div>
                 </div>
                 <div class="titlediv">
-                    <div class="title page">Using the Payment Input Form</div>
+                    <div class="title page">The Record Sheet</div>
                 </div>
                 <div class="titlediv">
-                    <div class="title page">Using the Payment View</div>
+                    <div class="title page">The Recent Sheet</div>
                 </div>
                 <div class="titlediv">
-                    <div class="title page">Using the Payment Input Form</div>
+                    <div class="title page">The Summary Sheet</div>
                 </div>
                 <div class="titlediv">
-                    <div class="title page">End of Guide</div>
+                    <div class="title page">Editable Values</div>
+                </div>
+                <div class="titlediv">
+                    <div class="title page">End of Manual</div>
                 </div>
             </div>
             <div class="parallax__layer foreground">
                 <div class="text">
-                    <div class="sub title">Welcome</div>
-                    <p class="para">There are functions of Microsoft Excel that are assumed knowlage for the following Help Manual pages.</p>
-                    <p class="para">A few basic operating pricipals:</p>
+                    <div class="sub title">Using the Spreadsheet</div>
+                    <p class="para">There are functions of Microsoft Excel that are assumed knowledge for the following Help Manual pages.</p>
+                    <div class="pic">
+                        <img src="Screen%20Shot%201.png">
+                        <p><i>Fig 1</i> - The Sheet Selection Tabs</p>
+                    </div>
+                    <p class="para">A few basic operating principals:</p>
                     <ul class="list">
                         <li>Sheets are different pages or views of the same spreadsheet file. The different functions of this Spreadsheet file have been split into 6 sheets, however, only three have to be accessed to fulfill basic operation.</li>
-                        <div class="pic">
-                            <img src="Screen%20Shot%201.png">
-                            <p><i>Fig 1</i> - The Sheet Selection Tabs</p>
-                        </div>
-                        <li>To switch between sheets, which have names that describe their function such as <code>Input</code> for Input Form, the user can select them by clicking on the tabs as the bottom left of the Excel interface. As seen in <i>Figure 1</i></li>
-                        <li>The cursor is the easiest method of interraction with Excel, if this Manual asks you to select or interact with some element of the screen, using the cursor the unspoken assumption.</li>
+                        <li>To switch between sheets, which have names that describe their function such as <code>Input</code> for the "Employee Payment Form", the user can select them by clicking on the tabs as the bottom left of the Excel interface. As seen in <i>Figure 1</i>.</li>
+                        <li>The cursor is the easiest method of interaction with Excel, if this Manual asks you to select or interact with some element of the screen, using the cursor is an unspoken assumption.</li>
+                        <li>Words that appear the same in this Help Manual as they do in the spreadsheet are enclosed in quotes (""), and functions or sheets are formatted like <code>This</code>.</li>
                     </ul>
                 </div>
                 <div class="text">
-                    <div class="title">Using the Spreadsheet</div>
-                    <p class="para">There are functions of Microsoft Excel that are assumed knowlage for the following Help Manual pages.</p>
-                    <p class="para">A few basic operating pricipals:</p>
-                    <ul class="list">
-                        <li>Sheets are different pages or views of the same spreadsheet file. The different functions of this Spreadsheet file have been split into 6 sheets, however, only three have to be accessed to fulfill basic operation.</li>
-                        <div class="pic">
-                            <img src="Screen%20Shot%201.png">
-                            <p><i>Fig 1</i> - The Sheet Selection Tabs</p>
-                        </div>
-                        <li>To switch between sheets, which have names that describe their function such as <code>Input</code> for Input Form, the user can select them by clicking on the tabs as the bottom left of the Excel interface. As seen in <i>Figure 1</i></li>
-                        <li>The cursor is the easiest method of interraction with Excel, if this Manual asks you to select or interact with some element of the screen, using the cursor the unspoken assumption.</li>
-                    </ul>
-                </div>
-                <div class="text">
-                    <div class="title">Using the Payment Input Form</div>
-                    <p class="para">The Payment Input Form is a page of your spreadsheet that allows you to enter information into the record page in a manner that is significantly quicker the entering the information either manually into the spreadsheet, or onto a similar paper system.</p>
+                    <div class="sub title">Using the Employee Payment Form</div>
+                    <p class="para">The "Employee Payment Form" is a page of your spreadsheet that allows you to enter information into the <code>Record</code> Sheet in a manner that is significantly quicker the entering the information either manually into the spreadsheet, or onto a similar paper system.</p>
                     <div class="pic">
                         <img src="Screen%20Shot%202.png">
                         <p><i>Fig 2</i> - The Input Sheet</p>
                     </div>
-                    <p class="para">To operate the Input Form the user must:</p>
+                    <p class="para">To operate the "Employee Payment Form" the user must:</p>
                     <ul class="list">
                         <li>Select the sheet <code>Input</code> from the tabs on the bottom left. <i>Figure 1</i>.</li>
                         <li>You can observe on this sheet, <i>Figure 2</i>, there are are colored areas that you can select. These colored areas are where the information is entered this text is next.</li>
-                        <li>Any information entered into the darker green underlined areas notated the picture will be copied to the <code>Record</code> table when the <code>Submit</code> function is run.</li>
-                        <li>The <code>Submit</code> function is a system that copies the information you have entered into the Input Form to the <code>Record</code> sheet, arranging it in a readable manner as can be seen from <i>Figure 3</i>. To run this function, the user must use the light green buttons on the lower right of the <code>Input</code> Sheet, <i>Figure 2</i>.</li>
-                        <li>You may also notice a <code>Clear</code> function, this button allows the operator to delete the current information from the Input Form, saving time when entering similar records into the <code>Record</code> Sheet.</li>
+                        <li>Any information entered into the darker green underlined areas notated <i>Figure 2</i> will be copied to the <code>Record</code> table when the <code>Submit</code> function is run.</li>
+                        <li>The <code>Submit</code> function is a system that copies the information you have entered into the "Employee Payment Form" to the <code>Record</code> sheet, arranging it in a readable manner as can be seen from <i>Figure 3</i>. To run this function, the user must use the light green buttons on the lower right of the <code>Input</code> Sheet, <i>Figure 2</i>.</li>
+                        <li>You may also notice a <code>Clear</code> function, this button allows the operator to delete the current information from the "Employee Payment Form", saving time when entering similar records into the <code>Record</code> Sheet.</li>
                     </ul>
                 </div>
                 <div class="text">
-                    <div class="title">Interpreting the Stored Records</div>
-                    <p class="para">The <code>Record</code> Sheet is where all payment records entered into the system are stored. It takes the form of a table, with one row for each employee per week, and 26 columns that show all information that went into calculating the employees Total Pay.</p>
+                    <div class="sub title">Interpreting the Stored Records</div>
+                    <p class="para">The <code>Record</code> Sheet is where all payment records entered into the system are stored. It takes the form of a table, with one row for each employee per week, and 26 columns that show all information that went into calculating the employees <code>Total Pay</code>.</p>
                     <div class="pic">
                         <img src="Screen%20Shot%203.png">
-                        <p><i>Fig 3</i> - An Example of the Record Sheet</p>
+                        <p><i>Fig 3</i> - A Part of the Record Sheet</p>
                     </div>
-                    <p class="para">To operate the <code>Record</code> Sheet the user must:</p>
+                    <p class="para">To use the <code>Record</code> Sheet the user should remember to:</p>
                     <ul class="list">
-                        <li>Select the sheet <code>Record</code> from the tabs on the bottom left. <i>Figure 1</i>.</li>
+                        <li>Before you begin, select the sheet <code>Record</code> from the tabs on the bottom left. <i>Figure 1</i>.</li>
+                        <li>Notice the system of column headings and sub headings, as can be observed in <i>Figure 3</i>. These main headings break up the table and make it easier to find parts. Such as <code>Task Pay</code> and <code>Hours Worked</code>.</li>
+                        <li>You may notice the colored circles in the column <code>Total Hours</code>, these turn red if the employee has worked more then 40 hours in a single week, and are green otherwise.</li>
+                        <li>Another factor that may confuse the user is the absence of units in the rows. This is because the units have been moved to the column headings of the table, to make the information easier to skim through quickly.</li>
                     </ul>
+                    <p class="para">Note: You may have to scroll left or right on the spreadsheet to see all the columns.</p>
                 </div>
                 <div class="text">
-                    <div class="title">Using the Payment View</div>
-                    <p class="para">The <code>Recent</code> Sheet</p>
+                    <div class="sub title">Using the Payment View</div>
+                    <p class="para">The Payment View function allows you to review individual entries from the <code>Record</code> Sheet in a less dense and more readable manner.</p>
                     <div class="pic">
                         <img src="Screen%20Shot%204.png">
                         <p><i>Fig 4</i> - The Recent Sheet</p>
@@ -209,6 +204,36 @@
                     <p class="para">To operate the <code>Recent</code> Sheet the user must:</p>
                     <ul class="list">
                         <li>Select the sheet <code>Recent</code> from the tabs on the bottom left. <i>Figure 1</i>.</li>
+                        <li>Notice the section titled "Payment View Select" in the bottom right of the Sheet, displayed in <i>Figure 4</i> above. This editable area allows you to enter a Row Reference from the <code>Record</code> Sheet that will change the "Payment View" to display that corresponding entry.</li>
+                        <li>To find the Row Reference of a particular wage, the user must first locate that payment in the <code>Record</code> Sheet. The number on the far left of the desired entry displays the Row Reference. This column is just left of the view from <i>Figure 3</i>.</li>
+                        <li>In the "Payment View Select" section, the number titled "Most Recent", Seen in <i>Figure 4</i>, informs the user of the Row Reference of the last entry into the <code>Record</code> Sheet. This number will increment upwards as new entries are added to the system.</li>
+                    </ul>
+                </div>
+                <div class="text">
+                    <div class="sub title">Using the Payment Summary</div>
+                    <p class="para">The <code>Summary</code> Sheet gives the user a method of easily reviewing the large amounts of information that may in the <code>Record</code> Sheet. Summarized in graphs and tables, as seen in <i>Figure 5</i>.</p>
+                    <div class="pic">
+                        <img src="Screen%20Shot%205.png">
+                        <p><i>Fig 5</i> - The Summary Sheet</p>
+                    </div>
+                    <p class="para">This Sheet does not require direct user interaction, but here are some pointers on understanding the information it provides:</p>
+                    <ul class="list">
+                        <li>First, select the sheet <code>Recent</code> from the tabs on the bottom left. <i>Figure 1</i>.</li>
+                        <li>The information is sorted into two broad areas, "Time Spent on Task" lets the user see the distribution of the total hours spent working from all information in the system.</li>
+                        <li>The section "Work Per Employee" lets the reader observe the distribution of hours on a per employee basis. Making weeding out the weakest link easier then ever.</li>
+                    </ul>
+                </div>
+                <div class="text">
+                    <div class="sub title">Changing System Constants</div>
+                    <p class="para">This spreadsheet system is designed to be adaptable to changing conditions in the organization, as well as being designed so that changes in the future have no effect on calculations made in the past.</p>
+                    <div class="pic">
+                        <img src="Screen%20Shot%206.png">
+                        <p><i>Fig 6</i> - The Lookup Sheet</p>
+                    </div>
+                    <p class="para">Not all parameters can be modified by the user, but here is a list of those that can:</p>
+                    <ul class="list">
+                        <li>"Pay Rates" and "Bonus Rates" can be changed for future payments in the <code>Input</code> Sheet. In <i>Figure 2</i>, it can be seen that a small table on the right lists some of the factors that determine employee pay. All of the numbers in the table can be edited by the user and will take effect next time the <code>Submit</code> function is run. Another thing to note is that "Bonus Rates" are only applied when the hours worked on that particular task is greater then or equal to 5. This cannot be changed by the user.</li>
+                        <li>Another parameter that can be useful to change is the list of employees currents employed. To edit this list, procede to the <code>Lookup</code> Sheet, depicted in <i>Figure 6</i>. Editing the values under "Employees" and "Employee Phone" will make those values avaliable when selecting workers from the <code>Input</code> Sheet. However, it will not update the names in the <code>Summary</code> Sheet.</li>
                     </ul>
                 </div>
             </div>
