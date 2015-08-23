@@ -7,74 +7,124 @@
     <style>
         body {
             font-family:'Open Sans';
-            background-color: aqua;
+            background-color: #535353;
         }
         .parallax {
             overflow-x: hidden;
             overflow-y: auto;
             -webkit-perspective: 1px;
-            font-size: 200%;
+            height: 100vh;
         }
-        
         .parallax__layer {
             position: absolute;
             left: 0;
             right: 0;
-            padding: 100vh 0;
         }
-
         .parallax__layer.background {
             -webkit-transform: translateZ(-1px) scale(2);
-            background-color: firebrick;
-            height: 100%;
+            background-color: #535353;
+            height: 100vh;
         }
-
         .parallax__layer.foreground {
             -webkit-transform: translateZ(0);
-            background-color: darkviolet;
-            margin-top: 100vh;
-            margin-bottom: 100vh;
+            background-color: white;
+            margin: 100vh 7px 100vh 7px;
             position: relative;
+            height: calc(100vh - 14px);
         }
-
         * {
             margin:0;
             padding:0;
         }
-        
-        .title {
+        .text {
             position: absolute;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: inline;
+            padding: 20px;
         }
-
-        .demo__info {
-            position: absolute;
-            z-index:100;
-            bottom: 1vh;
-            top: auto;
-            font-size:80%;
-            text-align:center;
+        .text > * {
+            margin: 7px;    
+        }
+        .title {
             width: 100%;
+            text-align: center;
+            font-size: 175%;
+            font-family: serif;
+        }
+        .title.page {
+            margin-top: 40vh;
+            color: white;
+            text-decoration: underline;
+            font-size: 250%;
+        }
+        .list {
+            list-style-type: square;
+            margin: 10px;
+            margin-left: 50px;
+        }
+        li {
+            padding: 5px;    
+        }
+        .para {
+            margin: 20px;
+        }
+        code {
+            background: #e3e3e3;
+            padding: 3px;
+            font-size: 110%;
+        }
+        img {
+            display: inline;
+            width: 100%;
+            padding: 0; !important 
+        }
+        .pic {
+            float: right;
+            width: 50%;
+            background: #acacac;
+        }
+        .pic > p {
+            color: white;
+            padding: 5px;
+            padding-top: 0;
+            text-align: center;
         }
     </style>
   </head>
   <body>
     <div class="parallax">
         <div class="parallax__layer background">
-            <div class="title">This is the background</div>
+            <div class="text">
+                <div class="title page">Jen's Gardens Help Manual</div>
+            </div>
         </div>
         <div class="parallax__layer foreground">
-            <div class="title">This is a foreground</div>
+            <div class="text">
+                <div class="title">Using the Input Form</div>
+                <p class="para">The input form is a page of your spreadsheet that alows you to enter information intop the record page in a manner that is signifigantly quicker the entering the information either manually into the spreadsheet, or onto a simailal paper system.</p>
+                <div class="pic"><img src="Screen%20Shot%202015-08-20%20at%202.41.35%20pm.png"><p>The Input Form</p></div>
+                <p class="para">To operate the input form the user must:</p>
+                <ul class="list">
+                    <li>Select the sheet <code>Input</code> from the tabs on the bottom left</li>
+                    <li>You can observe on this sheet there are are colored areas that you can select. These colored areas are where the information is entered this text is next</li>
+                    <li>Any inforamtion entered into the darker green underlined areas notated the picture will be copied to the <code>Record</code> table when the <code>Submit</code> function is run</li>
+                    <li></li>
+                </ul>
+            </div>
         </div>
-        <div class="parallax__layer foreground">
-            <div class="title">This is a foreground</div>
-        </div>
-        <div class="parallax__layer foreground">
-            <div class="title">This is a foreground</div>
-        </div>
-        <div class="parallax__layer foreground">
-            <div class="title">This is a foreground</div>
+         <div class="parallax__layer foreground">
+            <div class="text">
+                <div class="title">Using the Recent History</div>
+                <p class="para"></p>
+                <div class="pic"><img src=""><p>The Recent Form</p></div>
+                <p class="para">To operate the <code>Recent</code> form the user must:</p>
+                <ul class="list">
+                    <li></li>
+                </ul>
+            </div>
         </div>
     </div>
   </body>
