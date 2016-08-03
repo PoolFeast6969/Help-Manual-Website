@@ -29,10 +29,13 @@
 
             .parallax__layer.background {
                 -webkit-transform: translateZ(-1px) scale(2);
+                padding-top: 2.2em;
             }
 
             .parallax__layer.foreground {
                 -webkit-transform: translateZ(0);
+                max-width: 65em;
+                margin: auto
             }
 
             * {
@@ -48,16 +51,22 @@
                 padding: 20px;
                 background-color: white;
                 position: relative;
-                height: calc(100vh - 14px);
-                margin: calc(100vh + 14px) 7px calc(100vh + 14px) 7px;
+                height: calc(100vh - 14px - 4em);
+                margin: calc(100vh + 14px + 4em) 7px calc(100vh + 14px) 7px;
                 overflow-y: scroll;
                 box-shadow: 0 0 5px 10px rgb(96, 201, 100);
+                border-radius: 3px;
             }
 
             .titlediv {
                 height: 100vh;
                 position: relative;
-                background-color: transparent;
+            }
+            
+            .maintitlediv {
+                font-size: xx-large;
+                height: 80vh;
+                position: relative;
             }
 
             .text > * {
@@ -127,9 +136,12 @@
 
     <body>
         <div class="parallax">
+            <div class="maintitlediv">
+                    <div class="title page">Jen's Gardens</div>
+            </div>
             <div class="parallax__layer background">
                 <div class="titlediv">
-                    <div class="title page">Jen's Gardens Help Manual</div>
+                    <div class="title page">Or whatever</div>
                 </div>
                 <div class="titlediv">
                     <div class="title page">The Input Sheet</div>
